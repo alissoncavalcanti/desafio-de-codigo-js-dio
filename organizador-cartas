@@ -1,0 +1,20 @@
+// Lendo a entrada e transformando em um array
+let gets = "Mago Verde, Mago Verde, Dragao Branco"
+let cartas = gets.split(", ").map(c => c.trim());
+
+let contagem = {};
+
+// Contando as ocorrências das cartas
+cartas.forEach(carta => {
+    if (contagem[carta]) {
+        contagem[carta]++;
+    } else {
+        contagem[carta] = 1;
+    }
+});
+
+// TODO: Agora, ordene as cartas alfabeticamente e exiba a saída no formato "Carta: Quantidade"
+
+if (contagem["Dragao Branco"]>0){console.log("Dragao Branco: " + contagem["Dragao Branco"])}
+if (contagem["Kuriboh"]>0){console.log("Kuriboh: " + contagem["Kuriboh"])}
+if (contagem["Mago Verde"]>0){console.log("Mago Verde: " + contagem["Mago Verde"])}
